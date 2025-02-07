@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<title>Teste "document.getElementById();"</title>
+
+		<link rel="stylesheet" type="text/css" href="donuts.css" />
+		<language="JavaScript" type="text/javascript" src="voidMaim"/>
+
+		<script type="text/javascript">
+
+			function pegaAtributo()
+			{
+				var nome = document.getElementById("senha").value;
+				document.getElementById("total").value = "" + nome;
+				alert("O Atributo é: " + nome);
+			}
+			function sequencia()
+			{
+				var valor = parseInt(document.getElementById("coluna6").value);
+				var final = 0;
+				if(isNaN(valor))
+					valor = 0;
+					while(valor > 0)
+					{
+						alert("Caso: " + valor);
+						final = final + valor;						
+						valor = valor - 1;
+						document.getElementById("certo").value =  final;
+					}
+			}
+			</script>
+	</head>
+	<body>
+		<div id="frame">
+			<div class="field">
+				Senha: <input type="password" id="senha" value=""/>
+			</div>
+			<br/>
+			<div class="field">
+				<input type="button" value="Qual é a senha?" onclick="pegaAtributo();"/>
+			</div>
+		</div>
+		<div>
+			<p>
+				<input id="coluna1" type="text" name="col-1" value="" size="1" maxlength="2"/>
+				<input id="coluna2" type="text" name="col-2" value="" size="1" maxlength="2"/>
+				<input id="coluna3" type="text" name="col-3" value="" size="1" maxlength="2"/>
+				<input id="coluna4" type="text" name="col-4" value="" size="1" maxlength="2"/>
+				<input id="coluna5" type="text" name="col-5" value="" size="1" maxlength="2"/>
+				<input id="coluna6" type="text" name="col-6" value="" size="1" maxlength="2" onchange="calculaId()"/>
+				<input type="button" value="Id" onclick="calculaId()"/>
+				<input type="button" value="!" onclick="sequencia()"/>
+				<input type="text" id="certo" name="total" value="" readonly="readonly"/>
+			</p>
+		</div>
+		<div style="text-align: center;">
+			<iframe width="1200" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?oe=UTF-8&amp;q=googmaps&amp;ie=UTF8&amp;hl=en&amp;ll=39.120895,-122.837631&amp;spn=10.529124,91.610886&amp;output=embed&amp;s=AARTsJp010GNuxlysLI2usoEo529FzhjJg"></iframe>
+			<br/>
+			<small>
+				<a href="http://maps.google.com/maps?oe=UTF-8&amp;q=googmaps&amp;ie=UTF8&amp;hl=en&amp;ll=39.120895,-122.837631&amp;spn=10.529124,91.610886&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a>			</small>		</div>
+		<div>
+			<object width="50" height="15">
+				<param name="movie" value="come-come.swf">
+				<embed src="come-come.swf" width="50" height="15">
+				</embed>
+			</object>
+		</div>
+	</body>
+</html>
